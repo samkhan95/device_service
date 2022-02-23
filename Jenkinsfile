@@ -2,7 +2,7 @@ node{
     stage("SCM Checkout"){
         git 'https://github.com/samkhan95/device_service.git'
     }
-    stage("Build the image"){
+    stage("Building the image"){
         sh 'sudo docker build -t samad095/device-service .'
     }
     stage("Pushing the image on Docker Hub"){
